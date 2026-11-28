@@ -1,0 +1,15 @@
+name = "velocity-ffa"
+main = "worker.js"
+compatibility_date = "2025-04-01"
+
+[vars]
+# Your Firebase project ID (Firebase console > Project settings). Leave empty to allow guests with plain names (no accounts).
+FIREBASE_PROJECT_ID = "velocity-fps"
+
+[[durable_objects.bindings]]
+name = "ROOMS"
+class_name = "GameRoom"
+
+[[migrations]]
+tag = "v1"
+new_sqlite_classes = ["GameRoom"]
